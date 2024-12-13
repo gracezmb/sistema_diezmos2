@@ -1,0 +1,245 @@
+/* Estilos generales del body */
+body {
+    background-color: #F3F4F6;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navegación */
+.menu {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.menu a {
+    color: #4F46E5;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+}
+
+.menu a:hover {
+    background-color: #F3F4F6;
+    color: #4338CA;
+}
+
+/* Encabezado y logo */
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.form-header img {
+    max-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.form-header h1 {
+    color: #1F2937;
+    font-size: 1.875rem;
+    margin: 0;
+}
+
+/* Secciones del formulario */
+.form-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form-section h3 {
+    color: #1F2937;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #374151;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs y selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 0.375rem;
+    background-color: white;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Grupo de cédula con botón */
+.cedula-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.cedula-group input {
+    flex: 1;
+}
+
+/* Botones */
+.btn-secondary,
+.btn-submit,
+.btn-remove {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary {
+    background-color: #4B5563;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #374151;
+}
+
+.btn-submit {
+    background-color: #10B981;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
+    margin-top: 2rem;
+}
+
+.btn-submit:hover {
+    background-color: #059669;
+}
+
+/* Items de ofrenda y transferencia */
+.ofrenda-item,
+.transferencia-item {
+    background-color: #F9FAFB;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: end;
+    position: relative;
+}
+
+.btn-remove {
+    background-color: #EF4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.btn-remove:hover {
+    background-color: #DC2626;
+}
+
+/* Alertas */
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+}
+
+.alert-success {
+    background-color: #D1FAE5;
+    color: #065F46;
+    border: 1px solid #34D399;
+}
+
+.alert-danger {
+    background-color: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #F87171;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .menu a {
+        display: block;
+        padding: 0.75rem;
+    }
+    
+    .cedula-group {
+        flex-direction: column;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
+    
+    .ofrenda-item,
+    .transferencia-item {
+        grid-template-columns: 1fr;
+    }
+}
